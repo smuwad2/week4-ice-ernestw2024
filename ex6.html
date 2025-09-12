@@ -19,6 +19,19 @@
     <script>
         
         // add code here
+        const selected_item = document.getElementById("select_item");
+        const shopList = document.getElementById("shopList");
+
+        selected_item.addEventListener("change", function() {
+            const child = document.createElement("li");
+            child.innerText = selected_item.value;
+
+            child.addEventListener("click", function() {
+                shopList.removeChild(child);
+            });
+
+            shopList.appendChild(child);
+        });
         
         
     </script>

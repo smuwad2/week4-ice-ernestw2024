@@ -26,15 +26,26 @@
     <script>
         var square=true;
        // add code here
-       function changeShape(){
-        var divElem = document.getElementById("div1");
-        if(square){
-            divElem.style.borderRadius = "50%";
+    //    function changeShape(){
+    //     var divElem = document.getElementById("div1");
+    //     if(square){
+    //         divElem.style.borderRadius = "50%";
+    //     }
+    //     else{
+    //         divElem.style.borderRadius = "0";
+    //     }
+    //     square = !square
+    //    }
+    function changeShape() {
+        const current_shape = document.getElementsByTagName("div")[0];
+        if (current_shape.id == "div1") {
+            current_shape.id = "div2";
         }
-        else{
-            divElem.style.borderRadius = "0";
+        else {
+            current_shape.id = "div1";
         }
-        square = !square
+        console.log(current_shape.id);
+
        }
         
     </script>
